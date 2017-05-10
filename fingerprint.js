@@ -75,7 +75,7 @@
       keys = this.doNotTrackKey(keys);
       keys = this.pluginsKey(keys);
       keys = this.pluginsNamekey(keys);
-      keys = this.canvasKey(keys);
+      //keys = this.canvasKey(keys);
       keys = this.getCanvasShort(keys);
       keys = this.webglKey(keys);
       keys = this.adBlockKey(keys);
@@ -540,7 +540,7 @@
         var available = [];
         for(var i = 0, l = fontList.length; i < l; i++) {
             if(isFontAvailable(fontsSpans[fontList[i]])) {
-                available.push(fontList[i]);
+                available.push(fontList[i].replace(/\s/g,''));
             }
         }
 
