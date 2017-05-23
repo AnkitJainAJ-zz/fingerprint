@@ -63,7 +63,7 @@
       keys = this.operatingSystemKey(keys);
       keys = this.browserWithMajorVersionKey(keys);
       keys = this.hardwareArchitectureKey(keys);
-      keys = this.availableScreenResolutionKey(keys);
+      //keys = this.availableScreenResolutionKey(keys);    //chrome bug
       keys = this.timezoneOffsetKey(keys);
       keys = this.sessionStorageKey(keys);
       keys = this.localStorageKey(keys);
