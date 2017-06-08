@@ -90,7 +90,7 @@
         var values = [];
         that.each(newKeys, function(pair) {
           var value = pair.value;
-          if (typeof pair.value.join !== "undefined") {
+          if (value && typeof pair.value.join !== "undefined") {
             value = pair.value.join(";");
           }
           values.push(value);
@@ -141,8 +141,8 @@
     hardwareArchitectureKey: function(keys){
       var userAgent = navigator.userAgent.toLowerCase();
       var patt=/\(.*?;\s+(.*?)[;)]/
-      var archWithVersion=userAgent.match(patt)[1];
-      var archWithoutVersion=archWithVersion.replace(/\d+|[_.]|\W+/g,"");
+      var archWithVersion=userAgent.match(patt) && userAgent.match(patt)[1];
+      var archWithoutVersion=archWithVersion && archWithVersion.replace(/\d+|[_.]|\W+/g,"");
       keys.push({key:"hardwareArchitecture", value: archWithoutVersion});
       return keys;
     },
