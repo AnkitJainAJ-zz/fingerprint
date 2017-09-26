@@ -577,7 +577,9 @@
       var patt=/(.*?)::/
       var plugins=[];
       for (var i=0;i<pluginsNames.length;i++){
-        plugins.push(pluginsNames[i].match(patt)[1])
+        if(typeof pluginsNames[i]==="string" && pluginsNames[i].match(patt)){
+         plugins.push(pluginsNames[i].match(patt)[1])
+        }
       }
       keys.push({key:"plugins",value: plugins});
       return keys;
