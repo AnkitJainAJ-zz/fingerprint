@@ -1,0 +1,19 @@
+{
+  "name": "fingerprint",
+  "version": "1.0.0",
+  "description": "Fingerprint library",
+  "main": "fingerprint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitJainAJ/fingerprint.git"
+  },
+  "author": "Ankit Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnkitJainAJ/fingerprint/issues"
+  },
+  "homepage": "https://github.com/AnkitJainAJ/fingerprint#readme"
+}
