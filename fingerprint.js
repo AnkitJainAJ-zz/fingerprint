@@ -155,23 +155,23 @@
       var patt;
       if(userAgent.indexOf("firefox") >= 0){
         patt=/firefox\/\d*/i;
-        browser=userAgent.match(patt)[0];
+        browser=userAgent.match(patt) && userAgent.match(patt)[0];
         // browser = "Firefox";
       } else if(userAgent.indexOf("opera") >= 0 || userAgent.indexOf("opr") >= 0){
         patt=/opr\/\d*|opera\/\d*/i;
-        browser=userAgent.match(patt)[0];
+        browser=userAgent.match(patt) && userAgent.match(patt)[0];
         // browser = "Opera";
       } else if(userAgent.indexOf("chrome") >= 0){
         patt=/chrome\/\d*/i;
-        browser=userAgent.match(patt)[0];
+        browser=userAgent.match(patt) && userAgent.match(patt)[0];
         // browser = "Chrome";
       } else if(userAgent.indexOf("safari") >= 0){
         patt=/safari\/\d*/i;
-        browser=userAgent.match(patt)[0];
+        browser=userAgent.match(patt) && userAgent.match(patt)[0];
         // browser = "Safari";
       } else if(userAgent.indexOf("trident") >= 0){
         patt=/trident\/\d*/i;
-        browser=userAgent.match(patt)[0];
+        browser=userAgent.match(patt) && userAgent.match(patt)[0];
         // browser = "Internet Explorer";
       } else{
         browser = "Other";
